@@ -6,7 +6,12 @@ body {
 
 .jumbotron {
     padding: 45px 35px;
-    background-color: none;
+    background-image: linear-gradient(
+    to bottom right,
+    #e8fcff,
+    #b8dfe6,
+    #aed5db
+  );
 }
 
 .jumbotron #heart {
