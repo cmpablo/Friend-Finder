@@ -1,0 +1,34 @@
+body {
+    background-image: url("../images/bg_img.png");
+    font-family: 'Work Sans', sans-serif;
+    line-height: 1.6;
+}
+
+.jumbotron {
+    padding: 45px 35px;
+    background-color: none;
+}
+
+.jumbotron #heart {
+    color: rgb(255, 196, 0);
+}
+
+.jumbotron h1 {
+    font-family: 'Rubik Mono One', sans-serif;
+    font-size: 55px;
+    letter-spacing: -1px;
+    color: #16a2b6;
+}
+
+.questions p {
+    font-size: 20px;
+}
+
+.questions a {
+    font-size: 14px;
+}
+
+.questions h6 {
+    font-family: 'Rubik Mono One', sans-serif;
+    font-size: 12px;
+}
