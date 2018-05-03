@@ -6,9 +6,9 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <title>Friend Finder - Survey</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="icon" href="../images/favicon.ico" type="image/x-icon">
+    <link rel="icon" href="assets/images/favicon.ico" type="image/x-icon">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-    <link href="https://fonts.googleapis.com/css?family=Work+Sans:300|Rubik+Mono+One" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Work+Sans:300|Fugaz+One" rel="stylesheet">
     <link rel="stylesheet" type="text/css" href="assets/css/reset.css">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.10/css/all.css">
@@ -25,36 +25,48 @@
                     <span class="fas fa-heartbeat" id="heart"></span>
                 </a> Friend Finder</h1>
             <hr>
-            <h4 class="text-center">Tell us about yourself!</h4>
-            <br>
-
-            <div class="row">
-                <div class="col-md-2"></div>
-                <div class="col-md-4">
-                    <form>
-                        <div class="form-group pl-2">
-                            <label for="name-field">Name: *</label>
-                            <input type="text" class="form-control" id="userName" placeholder="ex. Debbie Harry">
-                            <small id="formHelp" class="form-text text-muted">* Required Fields</small>
-                        </div>
-                    </form>
-                </div>
-
-                <div class="col-md-4">
-                    <form>
-                        <div class="form-group pr-2">
-                            <label for="photo-link">Link to photo image: *</label>
-                            <input type="text" class="form-control" id="photoLink">
-                        </div>
-                    </form>
-                </div>
-                <div class="col-md-2"></div>
-            </div>
+            <h4 class="text-center">Where friends find friends while finding friends...</h4>
+            <!-- <button type="button" class="btn btn-sm btn-success" data-toggle="modal" data-target="#alertModal">
+                Launch demo modal
+            </button> -->
         </div>
     </div>
 
     <!---------------------------- QUESTIONS ---------------------------->
     <div class="container">
+        <!-- name and photo form fields -->
+        <div id="aboutYouContent">
+            <h5 class="text-center">Tell us about yourself!</h5>
+            <p class="text-center">Please fill in your name and a link to your profile photo.</p>
+            <br>
+        </div>
+        <div class="row">
+            <div class="col-md-2"></div>
+            <div class="col-md-4">
+                <form>
+                    <div class="form-group ">
+                        <label for="name-field">Name
+                            <small>(Required)</small>
+                        </label>
+                        <input type="text" class="form-control" id="userName" placeholder="ex. Debbie Harry">
+                    </div>
+                </form>
+            </div>
+
+            <div class="col-md-4">
+                <form>
+                    <div class="form-group ">
+                        <label for="photo-link">URL to photo image
+                            <small>(Required)</small>
+                        </label>
+                        <input type="text" class="form-control" id="photoLink" placeholder="ex. http://www.somelink.com">
+                    </div>
+                </form>
+            </div>
+            <div class="col-md-2"></div>
+        </div>
+        <hr>
+        <!-- questions -->
         <div class="questions mx-3 text-center">
             <h6>Question 1</h6>
             <p>I talk to a lot of different people at parties.</p>
@@ -227,23 +239,54 @@
             </div>
             <br>
             <br>
-            <button type="button" class="btn btn-info btn-block" id="submitBtn">Find me a friend!</button>
+            <!-- submit button -->
+            <button type="button" class="btn btn-info btn-lg btn-block" id="submitBtn">Find me a friend!</button>
         </div>
 
-        <!---------------------------- MODAL ---------------------------->
+        <!---------------------------- MATCH MODAL ---------------------------->
         <div class="modal fade" id="matchModal" tabindex="-1" role="dialog" aria-labelledby="modalTitle" aria-hidden="true">
             <div class="modal-dialog modal-dialog-centered" role="document">
                 <div class="modal-content">
-                    <div class="modal-header">
-                        <h5 class="modal-title" id="modalTitle">Meet your new BFF!</h5>
+                    <div class="modal-header text-center">
+                        <h5 class="modal-title" id="modalTitle">
+                            <span class="fas fa-heartbeat" id="heart"></span> Meet your new BFF!</h5>
                         <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                             <span aria-hidden="true">&times;</span>
                         </button>
                     </div>
                     <div class="modal-body">
-                        <!-- match name and photo loads here -->
-                        <img src="" id="matchPhoto" width="250px">
-                        <h5 id="matchName"></h5>
+                        <div class="container-fluid">
+                            <div class="row">
+                                <div class="col-md-5">
+                                    <h5 id="matchName"></h5>
+                                </div>
+                                <div class="col-md-7">
+                                    <img src="" id="matchPhoto" width="250px">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!---------------------------- VALIDATION MODAL ---------------------------->
+        <div class="modal fade" id="alertModal" tabindex="-1" role="dialog" aria-labelledby="modalTitle" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered" role="document">
+                <div class="modal-content">
+                    <div class="modal-header text-center">
+                        <h5 class="modal-title" id="modalTitle">
+                            <span class="fas fa-exclamation-circle" id="exclamation"></span> Alert</h5>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                    </div>
+                    <div class="modal-body">
+                        <div class="container-fluid">
+                            <div class="row">
+                                    <h4 id="matchName" class="text-center">Please complete all fields</h4>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -264,54 +307,78 @@
 
     <!---------------------------- JAVASCRIPT ---------------------------->
     <script type="text/javascript">
-        // validate all questions answered?
-
-
         $("#submitBtn").on("click", function (event) {
             event.preventDefault();
 
+            // form validation
+            function validateForm() {
+                var isValid = true;
+                // validating name + photo inputs
+                $(".form-control").each(function () {
+                    if ($(this).val() === "") {
+                        isValid = false;
+                    }
+                });
+
+                // validating dropdowns from Qs
+                $(".custom-select").each(function () {
+                    if ($(this).val() === "") {
+                        isValid = false;
+                    }
+                });
+                return isValid;
+            }
+
             // collect user inputs from questions
-            var newUserInput = {
-                name: $("#userName").val().trim(),
-                photo: $("#photoLink").val().trim(),
-                scores: [
-                    $("#q1").val(),
-                    $("#q2").val(),
-                    $("#q3").val(),
-                    $("#q4").val(),
-                    $("#q5").val(),
-                    $("#q6").val(),
-                    $("#q7").val(),
-                    $("#q8").val(),
-                    $("#q9").val(),
-                    $("#q10").val()
-                ]
-            };
+            if (validateForm()) {
+                var newUserInput = {
+                    name: $("#userName").val().trim(),
+                    photo: $("#photoLink").val().trim(),
+                    scores: [
+                        $("#q1").val(),
+                        $("#q2").val(),
+                        $("#q3").val(),
+                        $("#q4").val(),
+                        $("#q5").val(),
+                        $("#q6").val(),
+                        $("#q7").val(),
+                        $("#q8").val(),
+                        $("#q9").val(),
+                        $("#q10").val()
+                    ]
+                };
 
-            // add new user inputs to friend list via ajax post
-            $.post("/api/friends", newUserInput, function (data) {
-                console.log(data);
-                //$("#matchName").text(data.name);
-                // $("$matchPhoto").attr("src", data.photo);
-            });
+                // get location of root page
+                var currentURL = window.location.origin;
 
-            $('#matchModal').modal('show');
+                // add new user inputs to friend list via ajax post
+                $.post(currentURL + "/api/friends", newUserInput, function (data) {
+                    $("#matchName").text(data.name);
+                    $("#matchPhoto").attr("src", data.photo);
+                });
 
-            // clear inputs after submission
+                // display modal with results
+                $('#matchModal').modal('show');
 
-            $("#name").val("");
-            $("#photo").val("");
-            $("#q1").val("");
-            $("#q2").val("");
-            $("#q3").val("");
-            $("#q4").val("");
-            $("#q5").val("");
-            $("#q6").val("");
-            $("#q7").val("");
-            $("#q8").val("");
-            $("#q9").val("");
-            $("#q10").val("");
+                // clear inputs after submission
+                $("#name").val("");
+                $("#photo").val("");
+                $("#q1").val("");
+                $("#q2").val("");
+                $("#q3").val("");
+                $("#q4").val("");
+                $("#q5").val("");
+                $("#q6").val("");
+                $("#q7").val("");
+                $("#q8").val("");
+                $("#q9").val("");
+                $("#q10").val("");
 
+            } else {
+
+                // display alert modal
+                $('#alertModal').modal('show');
+            }
         });
     </script>
 

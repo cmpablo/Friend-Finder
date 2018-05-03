@@ -2,7 +2,7 @@ var friendArray =
 [
     {
         "name": "H.I. McDunnough",
-        "photo": "http://www.placecage.com/225/225",
+        "photo": "http://www.placecage.com/300/200",
         "scores": [
             3,
             5,
@@ -33,8 +33,8 @@ var friendArray =
         ]
     },
     {
-        "name": "Steve Zissou",
-        "photo": "http://www.fillmurray.com/g/250/300",
+        "name": "John Winger",
+        "photo": "http://www.fillmurray.com/284/196",
         "scores": [
             4,
             2,
@@ -49,8 +49,8 @@ var friendArray =
         ]
     },
     {
-        "name": "Randall Raines",
-        "photo": "http://www.placecage.com/g/300/225",
+        "name": "Memphis Raines",
+        "photo": "http://www2.pictures.zimbio.com/mp/PNlFPf8-dhcl.jpg",
         "scores": [
             4,
             2,

@@ -1,7 +1,7 @@
 body {
     background-image: url("../images/bg_img.png");
     font-family: 'Work Sans', sans-serif;
-    line-height: 1.6;
+    line-height: 1.7;
 }
 
 .jumbotron {
@@ -24,9 +24,29 @@ body {
 }
 
 .jumbotron h1 {
-    font-family: 'Rubik Mono One', sans-serif;
+    font-family: 'Fugaz One', cursive;
     font-size: 55px;
-    letter-spacing: -1px;
+    color: #16a2b6;
+}
+
+.jumbotron h4 {
+    margin: 10px 100px;
+}
+
+button {
+    font-family: 'Fugaz One', cursive;
+    color: #fff;
+}
+
+label {
+    font-family: 'Fugaz One', cursive;
+    font-size: 16px;
+    color: #16a2b6;
+}
+
+#aboutYouContent h5 {
+    font-family: 'Fugaz One', cursive;
+    font-size: 24px;
     color: #16a2b6;
 }
 
@@ -35,16 +55,62 @@ body {
 }
 
 .questions h6 {
-    font-family: 'Rubik Mono One', sans-serif;
-    font-size: 12px;
+    font-family: 'Fugaz One', cursive;
+    font-size: 14px;
     color: rgb(255, 196, 0);
 }
 
-/* modal styling */
+/* match modal */
+#matchModal .modal-title {
+    font-family: 'Fugaz One', cursive;
+    font-size: 24px;
+    color: #16a2b6;
+}
 
-#modalTitle {
-    font-family: 'Rubik Mono One', sans-serif;
-    font-size: 18px;
+#matchModal .modal-title span {
     color: rgb(255, 196, 0);
 }
 
+#matchModal .modal-header {
+    border-bottom: 1px solid #16a2b6;
+    background-image: linear-gradient(
+    to bottom right,
+    #e8fcff,
+    #b8dfe6,
+    #aed5db
+  );
+}
+
+.modal-body #matchName {
+    margin: 20px 0;
+}
+
+.modal-body #matchPhoto {
+    border: 1px solid #818181;
+}
+
+/* alert modal */
+#alertModal .modal-title {
+    font-family: 'Fugaz One', cursive;
+    font-size: 24px;
+    color: rgb(255, 0, 0);
+}
+
+#alertModal .modal-title span {
+    color: rgb(255, 0, 0);
+}
+
+#alertModal .modal-header {
+    border-bottom: 1px solid #ff3a3a;
+    background-image: linear-gradient(
+    to bottom right,
+    #ffe8e8,
+    #e6b8b8,
+    #d89393
+  );
+}
+
+.close span {
+    font-family: 'Work Sans', sans-serif;
+    font-weight: 700;
+}
