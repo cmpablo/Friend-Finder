@@ -1,6 +1,7 @@
+var friendArray =
 [
     {
-        "name": "Nicholas",
+        "name": "H.I. McDunnough",
         "photo": "http://www.placecage.com/225/225",
         "scores": [
             3,
@@ -16,7 +17,7 @@
         ]
     },
     {
-        "name": "Murray",
+        "name": "Peter Venkman",
         "photo": "http://www.fillmurray.com/225/225",
         "scores": [
             2,
@@ -32,7 +33,7 @@
         ]
     },
     {
-        "name": "Steve Z",
+        "name": "Steve Zissou",
         "photo": "http://www.fillmurray.com/g/250/300",
         "scores": [
             4,
@@ -48,7 +49,7 @@
         ]
     },
     {
-        "name": "Randall",
+        "name": "Randall Raines",
         "photo": "http://www.placecage.com/g/300/225",
         "scores": [
             4,
@@ -64,7 +65,7 @@
         ]
     },
     {
-        "name": "Skipper",
+        "name": "Skipper Sharkcat",
         "photo": "http://facts.net/wp-content/uploads/2015/07/Cat-Facts.jpg",
         "scores": [
             1,
@@ -80,7 +81,7 @@
         ]
     },
     {
-        "name": "Sid",
+        "name": "Regal Beagle",
         "photo": "https://i.pinimg.com/originals/89/d4/22/89d422f8b6c5e7e18db11dc188527f14.gif",
         "scores": [
             3,
@@ -94,5 +95,23 @@
             3,
             3
         ]
+    },
+    {
+        "name": "Target Lady",
+        "photo": "https://i.pinimg.com/originals/1a/06/4a/1a064af86650cf30ba46958ff669fef0.jpg",
+        "scores": [
+            5,
+            5,
+            5,
+            5,
+            5,
+            5,
+            5,
+            5,
+            5,
+            5
+        ]
     }
 ]
+
+module.exports = friendArray;
