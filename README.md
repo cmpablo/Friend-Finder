@@ -2,41 +2,38 @@
 
 ### What is this?
 
- https://git.heroku.com/vast-brushlands-90231.git
+A full-stack "friend finding" application based on compatibility... basically a dating app.
 
 ### How does it work?
 
-Using the command line...
+User accesses the survey through the main button on the home page. Once on the survey page, the user is required to provide their name and a link to their profile photo. Friend Finder takes the users' survey results and compares them with the results from other users. When the user is matched with a new friend, a modal pops up with the name and picture of the user's new BFF.
 
-ask LIRI to get | command
---------------- | -----------------------------
-the tweets of user See_Pablo | node liri.js my-tweets
-song information from Spotify | node liri.js spotify-this-song Lets Go Crazy
-movie information from OMDB | node liri.js movie-this John Wick
-song information from Spotify of a mystery song (retrieved from external .txt doc) | node liri.js do-what-it-says
+Experience the app here: https://vast-brushlands-90231.herokuapp.com/
 
-**Please Note:** LIRI's data is color-styled in a yellow, magenta, and blue theme. If a movie or song is not provided in the request, LIRI gets mad and returns data in red.
+**Failure to complete all fields will result in a modal alert**
 
 ### Screenshots
 
-Command: my-tweets
-![my-tweets](/images/liri_tweets_chalk.jpg)
+##### Friend Finder - Home
+![ff home](app/public/assets/images/ff_home.jpg)
 
-Command: spotify-this-song
-![spotify-this](/images/liri_spotify_chalk.jpg)
+##### Friend Finder - Survey
+![ff survey](app/public/assets/images/ff_survey.jpg)
 
-Command: movie-this
-![movie-this](/images/liri_movie_chalk.jpg)
+##### Friend Finder - Modal Alert (if all fields are not completed)
+![ff alert](app/public/assets/images/ff_alert.jpg)
 
-Command: do-what-it-says
-![do-what-it-says](/images/liri_doit_chalk.jpg)
+##### Friend Finder - Successful Friend Match
+![ff match](app/public/assets/images/ff_match.gif)
 
 ### Technologies Applied
 
 * HTML
-* CSS
+* Bootstrap/CSS
+* Heroku
 * node.js
 * JavaScript
+* jQuery
 * Node Packages
     * Express (https://www.npmjs.com/package/express)
     * Body Parser (https://www.npmjs.com/package/body-parser)
